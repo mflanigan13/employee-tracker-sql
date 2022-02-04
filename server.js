@@ -161,12 +161,57 @@ showEmployees = () => {
 };
 
 // function to add a department 
+addDepartment = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'addDept',
+            message: "What department do you want to add?",
+            validate: addDept => {
+                if (addDept) {
+                    return true;
+                } else {
+                    console.log('Please enter a department');
+                    return false;
+                }
+            }
+        }
+    ])
+        .then(answer => {
+            const sql = `INSERT INTO department (name)
+                    VALUES (?)`;
+            connection.query(sql, answer.addDept, (err, result) => {
+                if (err) throw err;
+                console.log('Added ' + answer.addDept + " to departments!");
 
-// function to add a role 
+                showDepartments();
+            });
+        });
+};
 
-// function to add an employee 
+// function to add a role
+addRole = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'role',
+            message: "What role do you want to add?",
+            validate: addRole => {
+                if (addRole) {
+                    return true;
+                } else {
+                    console.log('Please enter a role');
+                    return false;
+                }
+            }
+        },
+        // need to add in salary, department, etc?
+    ])
+}; 
 
-// function to update an employee 
+// function to add an employee
+
+// function to update an employee
 
 // function to view employee by department
 
