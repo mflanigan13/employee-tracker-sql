@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "employee-tracker-sql",
+  "description": "A command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mflanigan13/employee-tracker-sql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mflanigan13/employee-tracker-sql/issues"
+  },
+  "homepage": "https://github.com/mflanigan13/employee-tracker-sql#readme"
+}
