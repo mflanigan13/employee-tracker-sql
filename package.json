@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "console.table": "^0.10.0",
-    "inquirer": "^8.2.0",
+    "inquirer": "^7.0.0",
     "mysql2": "^2.3.3"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "name": "employee-tracker-sql",
   "description": "A command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.",
